@@ -1,41 +1,58 @@
 # Privacy Policy for Azuu
 
-**Effective Date:** May 16, 2026
+**Effective Date:** May 24, 2026
 
 ## 1. Introduction
-This Privacy Policy outlines how Azuu ("we", "our", or "the app") collects, uses, and protects your information. Azuu is designed as a productivity and focus tool. We prioritize your privacy above all else: **we do not collect, transmit, or sell any of your personal data to external servers or third parties.** All data processing occurs entirely locally on your device.
+This Privacy Policy outlines how Azuu ("we", "our", or "the app") collects, uses, and protects your information. Azuu is designed as a productivity, mindfulness, and focus tool. We prioritize your privacy above all else: **we do not collect, transmit, or sell any of your personal data to external servers or third parties.** All data processing and storage occur entirely locally on your device.
 
 ## 2. Permissions & Data Usage
-To function correctly as an app blocker and focus tool, Azuu requires specific sensitive permissions. This section clearly discloses how these permissions are used.
+To function reliably as an app blocker and mindfulness tool, Azuu requires specific system permissions. This section clearly discloses why these permissions are needed and how they are used.
 
 ### A. Usage Access (PACKAGE_USAGE_STATS)
-*   **Why we need it:** Azuu requires the Usage Access permission to monitor which application is currently in the foreground.
-*   **How it is used:** When an active Focus Session is running, the app checks if the foreground application is on your "Allowed Apps" list. If it is not, Azuu intervenes to block the distraction.
-*   **Data Handling:** We do not record, save, or transmit your app usage history. The foreground app check is performed locally and transiently.
+*   **Why we need it:** To monitor which application is currently in the foreground.
+*   **How it is used:** When an active Focus Session is running, the app checks if the foreground application is on your "Allowed Apps" list. If it is a blocked app, Azuu intervenes to prevent the distraction.
+*   **Data Handling:** App usage checks are performed locally, dynamically, and transiently. We do not save, record, or transmit your app usage history.
 
 ### B. Display Over Other Apps (SYSTEM_ALERT_WINDOW)
-*   **Why we need it:** Azuu requires the Display Over Other Apps permission to render the "Focus Shield" or penalty banner over distracting applications.
-*   **How it is used:** If you attempt to open a non-allowed app during a Focus Session, Azuu will draw an overlay screen on top of the distraction to prevent you from using it.
-*   **Data Handling:** This permission is solely used for displaying the UI overlay and does not collect any data.
+*   **Why we need it:** To render the "Focus Shield" blocker overlay on top of distracting applications.
+*   **How it is used:** If you attempt to open a blocked app during a Focus Session, Azuu draws a full-screen overlay to block access and remind you of your focus commitment.
+*   **Data Handling:** This permission is strictly used for UI rendering and does not collect or log any data.
 
 ### C. Notification Access (BIND_NOTIFICATION_LISTENER_SERVICE)
-*   **Why we need it:** Azuu uses Notification Access to silence and dismiss distracting notifications while you are focusing.
-*   **How it is used:** The app filters incoming notifications against your "Allowed Apps" list. Notifications from non-allowed apps are muted and dismissed to prevent distraction.
-*   **Data Handling:** Azuu does not read the content of your messages, nor does it save or transmit notification data.
+*   **Why we need it:** To temporarily quiet and dismiss notifications while you are focusing.
+*   **How it is used:** During a Focus Session, incoming notifications from blocked apps are automatically muted and dismissed to prevent immediate disruption.
+*   **Data Handling:** Notification filtering is processed locally. Azuu never reads the content of your notifications, nor does it save or transmit notification details.
+
+### D. Foreground Service (FOREGROUND_SERVICE & FOREGROUND_SERVICE_SPECIAL_USE)
+*   **Why we need it:** To run a persistent background service while a session is active.
+*   **How it is used:** Running as a foreground service with a visible persistent notification ensures that the Android OS does not unexpectedly terminate the app blocker when your device runs low on memory.
+*   **Data Handling:** This service is used purely to maintain blocker reliability and does not gather or upload any data.
+
+### E. Receive Boot Completed (RECEIVE_BOOT_COMPLETED) & Exact Alarms (SCHEDULE_EXACT_ALARM)
+*   **Why we need it:** To schedule and maintain your custom focus schedules.
+*   **How it is used:** The app uses exact alarms to trigger scheduled focus session notifications precisely on time. The boot permission allows the app to automatically reschedule these alarms and recover any active sessions if your device restarts.
+*   **Data Handling:** Alarms and schedules are managed locally on your device's alarm manager. No calendar or schedule details are shared externally.
+
+### F. Wake Lock (WAKE_LOCK)
+*   **Why we need it:** To keep the CPU active during monitoring.
+*   **How it is used:** Keeps the background blocker service running reliably during active sessions, preventing the device from putting the block checks to sleep.
+*   **Data Handling:** This is a system-level utility and does not store or process data.
+
+### G. Internet & Network State (INTERNET & ACCESS_NETWORK_STATE)
+*   **Why we need it:** To support external resource launching.
+*   **How it is used:** Although Azuu is designed to work fully offline and contains no backend server integration, these permissions are used when you explicitly choose to click on external links inside the app (e.g., contacting support via email, opening the developer's LinkedIn profile, or viewing this Privacy Policy online). These links are opened via your device's default web browser or mail client.
+*   **Data Handling:** No personal, focus, or app usage data is ever collected, transmitted, or synchronized over the internet.
 
 ## 3. Data Storage
-All data related to your focus sessions, target goals, custom messages, and allowed apps configurations is stored locally on your device using SQLite and SharedPreferences.
+All data related to your focus sessions, statistics, target goals, custom deterrent messages, and allowed exception configurations is stored locally on your device using SQLite and SharedPreferences.
 
-*   **No Cloud Sync:** We do not offer cloud synchronization.
-*   **Data Retention:** Azuu automatically deletes session history data that is older than 3 days from your device to save space.
-*   **Data Deletion:** If you uninstall the app or clear its data via Android Settings, all stored information is permanently deleted.
+*   **No Cloud Sync:** We do not offer cloud synchronization. Your data never leaves your device.
+*   **Data Retention:** Azuu automatically deletes session history data that is older than 3 days from your local database to optimize space.
+*   **Data Deletion:** If you uninstall the app or clear its data via Android Settings, all stored information is permanently and irreversibly deleted.
 
-## 4. Third-Party Services
-Azuu is a strictly local application. We do not integrate with third-party tracking services, analytics platforms, or ad networks.
-
-## 5. Changes to This Privacy Policy
+## 4. Changes to This Privacy Policy
 We may update our Privacy Policy from time to time. Since the app operates entirely offline without an account system, we encourage you to review this policy periodically. Any changes will be effective immediately upon publishing the updated policy.
 
-## 6. Contact Us
+## 5. Contact Us
 If you have any questions or suggestions regarding our Privacy Policy, please contact us at:
-**Email:** azuu2focus@gmail.com
+*   **Email:** azuu2focus@gmail.com
