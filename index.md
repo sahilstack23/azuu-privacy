@@ -28,17 +28,27 @@ To function reliably as an app blocker and mindfulness tool, Azuu requires speci
 *   **How it is used:** Running as a foreground service with a visible persistent notification ensures that the Android OS does not unexpectedly terminate the app blocker when your device runs low on memory.
 *   **Data Handling:** This service is used purely to maintain blocker reliability and does not gather or upload any data.
 
-### E. Receive Boot Completed (RECEIVE_BOOT_COMPLETED) & Exact Alarms (SCHEDULE_EXACT_ALARM)
+### E. Alarm & Boot Maintenance (RECEIVE_BOOT_COMPLETED, SCHEDULE_EXACT_ALARM & USE_EXACT_ALARM)
 *   **Why we need it:** To schedule and maintain your custom focus schedules.
 *   **How it is used:** The app uses exact alarms to trigger scheduled focus session notifications precisely on time. The boot permission allows the app to automatically reschedule these alarms and recover any active sessions if your device restarts.
 *   **Data Handling:** Alarms and schedules are managed locally on your device's alarm manager. No calendar or schedule details are shared externally.
 
-### F. Wake Lock (WAKE_LOCK)
+### F. Notifications & High-Priority Alerts (POST_NOTIFICATIONS & USE_FULL_SCREEN_INTENT)
+*   **Why we need it:** To notify you about focus milestones and show deterrent screens.
+*   **How it is used:** `POST_NOTIFICATIONS` is used to send session start/end reminders and keep a persistent status notification active. `USE_FULL_SCREEN_INTENT` allows the app to show your custom focus deterrent overlay immediately, even if your screen is locked or sleeping, when a distraction block is triggered.
+*   **Data Handling:** Used strictly for localized user notification and UI display; no alert data is collected or exported.
+
+### G. Ignore Battery Optimizations (REQUEST_IGNORE_BATTERY_OPTIMIZATIONS)
+*   **Why we need it:** To prevent background service termination by the system.
+*   **How it is used:** Prompts the user to exclude Azuu from Android's aggressive system battery savers, which ensures that the app blocking background monitor functions uninterrupted.
+*   **Data Handling:** Used only to adjust local system settings. No data is stored or processed.
+
+### H. Wake Lock (WAKE_LOCK)
 *   **Why we need it:** To keep the CPU active during monitoring.
 *   **How it is used:** Keeps the background blocker service running reliably during active sessions, preventing the device from putting the block checks to sleep.
 *   **Data Handling:** This is a system-level utility and does not store or process data.
 
-### G. Internet & Network State (INTERNET & ACCESS_NETWORK_STATE)
+### I. Internet & Network State (INTERNET & ACCESS_NETWORK_STATE)
 *   **Why we need it:** To support external resource launching.
 *   **How it is used:** Although Azuu is designed to work fully offline and contains no backend server integration, these permissions are used when you explicitly choose to click on external links inside the app (e.g., contacting support via email, opening the developer's LinkedIn profile, or viewing this Privacy Policy online). These links are opened via your device's default web browser or mail client.
 *   **Data Handling:** No personal, focus, or app usage data is ever collected, transmitted, or synchronized over the internet.
