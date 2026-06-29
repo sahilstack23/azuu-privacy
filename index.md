@@ -49,9 +49,9 @@ To function reliably as an app blocker and mindfulness tool, Azuu requires speci
 *   **Data Handling:** This is a system-level utility and does not store or process data.
 
 ### I. Internet & Network State (INTERNET & ACCESS_NETWORK_STATE)
-*   **Why we need it:** To support external resource launching.
-*   **How it is used:** Although Azuu is designed to work fully offline and contains no backend server integration, these permissions are used when you explicitly choose to click on external links inside the app (e.g., contacting support via email, opening the developer's LinkedIn profile, or viewing this Privacy Policy online). These links are opened via your device's default web browser or mail client.
-*   **Data Handling:** No personal, focus, or app usage data is ever collected, transmitted, or synchronized over the internet.
+*   **Why we need it:** To fetch dynamic font assets and support external link launching.
+*   **How it is used:** Used by the system to download dynamic typography resources (Google Fonts) on launch, and when you explicitly choose to click on external links inside the app (e.g., contacting support via email, opening the developer's LinkedIn profile, or viewing this Privacy Policy online).
+*   **Data Handling:** Used strictly for static asset loading and link redirection. No personal, focus, or app usage data is ever collected, transmitted, or synchronized over the internet.
 
 ## 3. Data Storage
 All data related to your focus sessions, statistics, target goals, custom deterrent messages, and allowed exception configurations is stored locally on your device using SQLite and SharedPreferences.
