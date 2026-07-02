@@ -53,16 +53,21 @@ To function reliably as an app blocker and mindfulness tool, Azuu requires speci
 *   **How it is used:** Used by the system to download dynamic typography resources (Google Fonts) on launch, and when you explicitly choose to click on external links inside the app (e.g., contacting support via email, opening the developer's LinkedIn profile, or viewing this Privacy Policy online).
 *   **Data Handling:** Used strictly for static asset loading and link redirection. No personal, focus, or app usage data is ever collected, transmitted, or synchronized over the internet.
 
-## 3. Data Storage
+## 3. Sponsor Redirection & Third-Party Websites
+Azuu features references and links to our official sponsor, **Gir Naturals** (e.g., redirecting to `https://www.girnatural.in` via your device's default web browser). 
+*   **No Data Sharing:** We do not track, share, transmit, or disclose any of your personal details, app usage history, focus statistics, or settings with Gir Naturals or any external party.
+*   **Independent Policies:** Once you navigate to the Gir Naturals website or any other third-party link, you are subject to the terms and privacy practices of that respective website. We recommend reviewing the privacy policies of external sites you visit, as we do not control and are not responsible for their content or data collection practices.
+
+## 4. Data Storage
 All data related to your focus sessions, statistics, target goals, custom deterrent messages, and allowed exception configurations is stored locally on your device using SQLite and SharedPreferences.
 
 *   **No Cloud Sync:** We do not offer cloud synchronization. Your data never leaves your device.
 *   **Data Retention:** Azuu automatically deletes session history data that is older than 3 days from your local database to optimize space.
 *   **Data Deletion:** If you uninstall the app or clear its data via Android Settings, all stored information is permanently and irreversibly deleted.
 
-## 4. Changes to This Privacy Policy
+## 5. Changes to This Privacy Policy
 We may update our Privacy Policy from time to time. Since the app operates entirely offline without an account system, we encourage you to review this policy periodically. Any changes will be effective immediately upon publishing the updated policy.
 
-## 5. Contact Us
+## 6. Contact Us
 If you have any questions or suggestions regarding our Privacy Policy, please contact us at:
 *   **Email:** azuu2focus@gmail.com
