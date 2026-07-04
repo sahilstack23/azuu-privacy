@@ -54,9 +54,9 @@ To function reliably as an app blocker and mindfulness tool, Azuu requires speci
 *   **Data Handling:** Used strictly for static asset loading and link redirection. No personal, focus, or app usage data is ever collected, transmitted, or synchronized over the internet.
 
 ## 3. Sponsor Redirection & Third-Party Websites
-Azuu features references and links to our official sponsor, **Gir Naturals** (e.g., redirecting to `https://www.girnatural.in` via your device's default web browser). 
-*   **No Data Sharing:** We do not track, share, transmit, or disclose any of your personal details, app usage history, focus statistics, or settings with Gir Naturals or any external party.
-*   **Independent Policies:** Once you navigate to the Gir Naturals website or any other third-party link, you are subject to the terms and privacy practices of that respective website. We recommend reviewing the privacy policies of external sites you visit, as we do not control and are not responsible for their content or data collection practices.
+Azuu features references and links to our official sponsor, **Gir Natural** (e.g., redirecting to `https://www.girnatural.in` via your device's default web browser). 
+*   **No Data Sharing:** We do not track, share, transmit, or disclose any of your personal details, app usage history, focus statistics, or settings with Gir Natural or any external party.
+*   **Independent Policies:** Once you navigate to the Gir Natural website or any other third-party link, you are subject to the terms and privacy practices of that respective website. We recommend reviewing the privacy policies of external sites you visit, as we do not control and are not responsible for their content or data collection practices.
 
 ## 4. Data Storage
 All data related to your focus sessions, statistics, target goals, custom deterrent messages, and allowed exception configurations is stored locally on your device using SQLite and SharedPreferences.
