@@ -54,16 +54,17 @@ To function reliably as an app blocker and mindfulness tool, Azuu requires speci
 *   **Data Handling:** Used strictly for static asset loading and link redirection. No personal, focus, or app usage data is ever collected, transmitted, or synchronized over the internet.
 
 ## 3. Sponsor Redirection & Third-Party Websites
-Azuu features references and links to our official sponsor, **Gir Natural** (e.g., redirecting to `https://www.girnatural.in` via your device's default web browser). 
-*   **No Data Sharing:** We do not track, share, transmit, or disclose any of your personal details, app usage history, focus statistics, or settings with Gir Natural or any external party.
-*   **Independent Policies:** Once you navigate to the Gir Natural website or any other third-party link, you are subject to the terms and privacy practices of that respective website. We recommend reviewing the privacy policies of external sites you visit, as we do not control and are not responsible for their content or data collection practices.
+Azuu features references and links to our official sponsor, **Gir natural** (e.g., redirecting to `https://www.girnatural.in` via your device's default web browser). 
+*   **No Data Sharing:** We do not track, share, transmit, or disclose any of your personal details, app usage history, focus statistics, or settings with Gir natural or any external party.
+*   **Independent Policies:** Once you navigate to the Gir natural website or any other third-party link, you are subject to the terms and privacy practices of that respective website. We recommend reviewing the privacy policies of external sites you visit, as we do not control and are not responsible for their content or data collection practices.
 
 ## 4. Data Storage
-All data related to your focus sessions, statistics, target goals, custom deterrent messages, and allowed exception configurations is stored locally on your device using SQLite and SharedPreferences.
+All data related to your focus sessions, statistics, target goals, custom deterrent messages, allowed exception configurations, and **in-session notes and tasks** is stored locally on your device using SQLite and SharedPreferences.
 
+*   **In-Session Notes & Quick Capture Tasks:** Any thoughts or tasks you capture using the Quick Notes panel during a focus session are saved exclusively in the local SQLite database on your device. They are never transmitted, synced, or shared with any external server or third party. You remain in full control — notes can be edited, checked off, or deleted at any time.
 *   **No Cloud Sync:** We do not offer cloud synchronization. Your data never leaves your device.
-*   **Data Retention:** Azuu automatically deletes session history data that is older than 3 days from your local database to optimize space.
-*   **Data Deletion:** If you uninstall the app or clear its data via Android Settings, all stored information is permanently and irreversibly deleted.
+*   **Data Retention:** Azuu automatically deletes session history data that is older than 5 days from your local database to optimize space.
+*   **Data Deletion:** If you uninstall the app or clear its data via Android Settings, all stored information — including notes and tasks — is permanently and irreversibly deleted.
 
 ## 5. Changes to This Privacy Policy
 We may update our Privacy Policy from time to time. Since the app operates entirely offline without an account system, we encourage you to review this policy periodically. Any changes will be effective immediately upon publishing the updated policy.
